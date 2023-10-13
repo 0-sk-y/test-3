@@ -1,3 +1,5 @@
+/* <=<=<=<=<=<=<=[ CP ]=>=>=>=>=>=>=>=> */
+
 html {
   box-sizing: border-box;
   font-family: sans-serif;
@@ -6,6 +8,7 @@ html {
 
 body {
   margin: 0;
+  overflow: hidden;
 }
 
 *,
@@ -22,3 +25,51 @@ video {
   max-width: 100%;
   height: auto;
 }
+
+/* <=<=<=<=<=<=<=[ Layout ]=>=>=>=>=>=>=>=> */
+
+.gc {
+  width: 100%;
+  height: 100vh;
+  /*   -> Grid <-   */
+  display: grid;
+  grid-template-columns: 20% repeat(2, 1fr) 20%;
+  grid-template-rows: 15% repeat(2, 1fr) 15%;
+  grid-template-areas: 
+  "header header header header"
+  "left c-1 c-2 right"
+  "left c-3 c-4 right"
+  "footer footer footer footer";
+}
+
+.header {grid-area: header;}
+.left {grid-area: left;}
+.c-1 {grid-area: c-1;}
+.c-2 {grid-area: c-2;}
+.c-3 {grid-area: c-3;}
+.c-4 {grid-area: c-4;}
+.right {grid-area: right;}
+.footer {grid-area: footer;}
+
+.header,
+.left,
+.c-1,
+.c-2,
+.c-3,
+.c-4,
+.right,
+.footer {
+  position: relative;
+  overflow: hidden;
+}
+
+/* <=<=<=<=<=<=<=[ INT ]=>=>=>=>=>=>=>=> */
+
+/* <=<=<=<=<=<=<=[ Header ]=>=>=>=>=>=>=>=> */
+/* <=<=<=<=<=<=<=[ L ]=>=>=>=>=>=>=>=> */
+/* <=<=<=<=<=<=<=[ C-1 ]=>=>=>=>=>=>=>=> */
+/* <=<=<=<=<=<=<=[ C-2 ]=>=>=>=>=>=>=>=> */
+/* <=<=<=<=<=<=<=[ C-3 ]=>=>=>=>=>=>=>=> */
+/* <=<=<=<=<=<=<=[ C-4 ]=>=>=>=>=>=>=>=> */
+/* <=<=<=<=<=<=<=[ R ]=>=>=>=>=>=>=>=> */
+/* <=<=<=<=<=<=<=[ Footer ]=>=>=>=>=>=>=>=> */
