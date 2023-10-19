@@ -1,4 +1,18 @@
-/* <=<=<=<=<=<=<=[ CP ]=>=>=>=>=>=>=>=> */
+/** (⌐■_■) Variables css */
+
+:root {
+  /*   -> Gradients <-   */
+  --gr-1: linear-gradient(rgb(0,0,0), rgb(58,58,58));
+  --gr-1-inv: linear-gradient(rgb(58,58,58), rgb(0,0,0));
+  --gr-1-50: linear-gradient(rgba(58,58,58,.5), rgba(0,0,0,.5));
+  --gr-2: linear-gradient(black, rgb(58,58,58), black);
+  /*   -> Colores <-   */
+  --c-grey-1: rgb(25,25,25);
+  --c-grey-2: rgb(50,50,50);
+  --c-grey-3: rgb(75,75,75);
+  --c-grey-4: rgb(100,100,100);
+  --c-grey-5: rgb(125,125,125);
+}
 
 html {
   box-sizing: border-box;
@@ -26,7 +40,7 @@ video {
   height: auto;
 }
 
-/* <=<=<=<=<=<=<=[ Layout ]=>=>=>=>=>=>=>=> */
+/** (⌐■_■) Layout */
 
 .gc {
   width: 100%;
@@ -63,13 +77,95 @@ video {
   overflow: hidden;
 }
 
-/* <=<=<=<=<=<=<=[ INT ]=>=>=>=>=>=>=>=> */
+/** (⌐■_■) INT */
 
-/* <=<=<=<=<=<=<=[ Header ]=>=>=>=>=>=>=>=> */
-/* <=<=<=<=<=<=<=[ L ]=>=>=>=>=>=>=>=> */
-/* <=<=<=<=<=<=<=[ C-1 ]=>=>=>=>=>=>=>=> */
-/* <=<=<=<=<=<=<=[ C-2 ]=>=>=>=>=>=>=>=> */
-/* <=<=<=<=<=<=<=[ C-3 ]=>=>=>=>=>=>=>=> */
-/* <=<=<=<=<=<=<=[ C-4 ]=>=>=>=>=>=>=>=> */
-/* <=<=<=<=<=<=<=[ R ]=>=>=>=>=>=>=>=> */
-/* <=<=<=<=<=<=<=[ Footer ]=>=>=>=>=>=>=>=> */
+.int {
+  position: absolute;
+  width: 40%;
+  height: 50%;
+  border: 1px solid var(--c-grey-1);
+  outline: 1px solid var(--c-grey-2);
+}
+
+/*! [ Header ] */
+
+.header {
+  background-image: var(--gr-2);
+}
+
+/* ?0__# int */
+
+.header .int:nth-child(1) {
+  background-color: red;
+  transform: skew(-45deg);
+  left: -5%;
+}
+
+.header .int:nth-child(2) {
+  background-color: red;
+  transform: skew(45deg);
+  right: -5%;
+}
+
+/*! [ L ] */
+
+.left {
+  background-image: var(--gr-2);
+}
+
+/*! [ C-1 ] */
+
+.c-1 {
+  background-color: var(--c-grey-1);
+  border: 1px solid var(--c-grey-2);
+}
+
+/*! [ C-2 ] */
+
+.c-2 {
+  background-color: var(--c-grey-1);
+}
+
+
+/*! [ C-3 ] */
+
+.c-3 {
+  background-color: var(--c-grey-1);
+}
+
+
+/*! [ C-4 ] */
+
+.c-4 {
+  background-color: var(--c-grey-1);
+  border: 1px solid var(--c-grey-2);
+}
+
+
+/*! [ R ] */
+
+.right {
+  background-image: var(--gr-2);
+}
+
+/*! [ Footer ] */
+
+.footer {
+  background-image: var(--gr-2);
+}
+
+/* ?0__# int */
+
+.footer .int:nth-child(1) {
+  background-color: red;
+  transform: skew(45deg);
+  left: -5%;
+  bottom: 0;
+}
+
+.footer .int:nth-child(2) {
+  background-color: red;
+  transform: skew(-45deg);
+  right: -5%;
+  bottom: 0;
+}
