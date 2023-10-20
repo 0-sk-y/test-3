@@ -1,17 +1,26 @@
 /** (⌐■_■) Variables css */
 
 :root {
-  /*   -> Gradients <-   */
+  
+  /*? d[-_-]b gradients */
+  
   --gr-1: linear-gradient(rgb(0,0,0), rgb(58,58,58));
   --gr-1-inv: linear-gradient(rgb(58,58,58), rgb(0,0,0));
   --gr-1-50: linear-gradient(rgba(58,58,58,.5), rgba(0,0,0,.5));
   --gr-2: linear-gradient(black, rgb(58,58,58), black);
-  /*   -> Colores <-   */
+
+  /*? d[-_-]b grey colors */
+  
   --c-grey-1: rgb(25,25,25);
   --c-grey-2: rgb(50,50,50);
   --c-grey-3: rgb(75,75,75);
   --c-grey-4: rgb(100,100,100);
   --c-grey-5: rgb(125,125,125);
+
+  /*? d[-_-]b grey colors */
+
+  --c-int-1: red;
+  --c-int-2: rgb(162,255,0);
 }
 
 html {
@@ -24,6 +33,8 @@ body {
   margin: 0;
   overflow: hidden;
 }
+
+/** (⌐■_■) Basic reset */
 
 *,
 *::before,
@@ -83,34 +94,104 @@ video {
   position: absolute;
   width: 40%;
   height: 50%;
-  border: 1px solid var(--c-grey-1);
-  outline: 1px solid var(--c-grey-2);
+  border: 2px solid var(--c-grey-1);
+  outline: 2px solid var(--c-grey-2);
+}
+
+/** (⌐■_■) ANI */
+
+@keyframes hue {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
 }
 
 /*! [ Header ] */
 
 .header {
   background-image: var(--gr-2);
+  border: 2px solid var(--c-grey-2);
+  outline: 2px solid var(--c-grey-3);
 }
 
 /* ?0__# int */
 
 .header .int:nth-child(1) {
-  background-color: red;
+  left: 50%;
+  height: 85%;
+  width: 50%;
+  transform: translate(-50%, 0);
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+  background-image: var(--gr-1);
+}
+
+.header .int:nth-child(2) {
+  background-color: var(--c-int-1);
   transform: skew(-45deg);
   left: -5%;
 }
 
-.header .int:nth-child(2) {
-  background-color: red;
+.header .int:nth-child(3) {
+  background-color: var(--c-int-1);
   transform: skew(45deg);
   right: -5%;
+}
+
+.header .int:nth-child(4) {
+  width: 20%;
+  height: 30%;
+  bottom: 0;
+  left: -5%;
+  background-image: repeating-linear-gradient(90deg, red 0 10%, rgb(50,50,50) 10% 20%);
+  transform: skew(45deg);
+}
+
+.header .int:nth-child(5) {
+  width: 20%;
+  height: 30%;
+  bottom: 0;
+  right: -5%;
+  background-image: repeating-linear-gradient(90deg, red 0 10%, rgb(50,50,50) 10% 20%);
+  transform: skew(-45deg);
+}
+
+.header .int:nth-child(6) {
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: 0;
+  width: 25%;
+  height: 30%;
+  background-color: var(--c-int-1);
+  clip-path: polygon(10% 0, 90% 0, 100% 100%, 0% 100%);
+}
+
+.header .int:nth-child(7) {
+  width: 25%;
+  background-color: var(--c-grey-1);
+  transform: skew(-45deg);
+  top: -10%;
+  left: -5%;
+  background-image: var(--gr-2);
+}
+
+.header .int:nth-child(8) {
+  width: 25%;
+  background-color: var(--c-grey-1);
+  transform: skew(45deg);
+  top: -10%;
+  right: -5%;
+  background-image: var(--gr-2);
 }
 
 /*! [ L ] */
 
 .left {
   background-image: var(--gr-2);
+  border: 2px solid var(--c-grey-2);
+  outline: 2px solid var(--c-grey-3);
 }
 
 /*! [ C-1 ] */
@@ -146,26 +227,85 @@ video {
 
 .right {
   background-image: var(--gr-2);
+  border: 2px solid var(--c-grey-2);
+  outline: 2px solid var(--c-grey-3);
 }
 
 /*! [ Footer ] */
 
 .footer {
   background-image: var(--gr-2);
+  border: 2px solid var(--c-grey-2);
+  outline: 2px solid var(--c-grey-3);
 }
 
 /* ?0__# int */
 
 .footer .int:nth-child(1) {
-  background-color: red;
+  left: 50%;
+  height: 85%;
+  width: 60%;
+  transform: translate(-50%, 0);
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+  background-image: var(--gr-1);
+}
+
+.footer .int:nth-child(2) {
+  background-color: var(--c-int-1);
   transform: skew(45deg);
   left: -5%;
   bottom: 0;
 }
 
-.footer .int:nth-child(2) {
-  background-color: red;
+.footer .int:nth-child(3) {
+  background-color: var(--c-int-1);
   transform: skew(-45deg);
   right: -5%;
   bottom: 0;
+}
+
+.footer .int:nth-child(4) {
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: 0;
+  width: 25%;
+  height: 30%;
+  background-color: var(--c-int-1);
+  clip-path: polygon(0 0, 100% 1%, 90% 100%, 10% 100%);
+}
+
+.footer .int:nth-child(5) {
+  width: 25%;
+  background-color: var(--c-grey-1);
+  transform: skew(45deg);
+  bottom: -10%;
+  left: -5%;
+  background-image: var(--gr-2);
+}
+
+.footer .int:nth-child(6) {
+  width: 25%;
+  background-color: var(--c-grey-1);
+  transform: skew(-45deg);
+  bottom: -10%;
+  right: -5%;
+  background-image: var(--gr-2);
+}
+
+.footer .int:nth-child(7) {
+  width: 20%;
+  height: 30%;
+  top: 0;
+  left: -5%;
+  background-image: repeating-linear-gradient(90deg, red 0 10%, rgb(50,50,50) 10% 20%);
+  transform: skew(-45deg);
+}
+
+.footer .int:nth-child(8) {
+  width: 20%;
+  height: 30%;
+  top: 0;
+  right: -5%;
+  background-image: repeating-linear-gradient(90deg, red 0 10%, rgb(50,50,50) 10% 20%);
+  transform: skew(45deg);
 }
