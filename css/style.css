@@ -8,6 +8,8 @@
   --gr-1-inv: linear-gradient(rgb(58,58,58), rgb(0,0,0));
   --gr-1-50: linear-gradient(rgba(58,58,58,.5), rgba(0,0,0,.5));
   --gr-2: linear-gradient(black, rgb(58,58,58), black);
+  --gd-3: linear-gradient(rgb(50,50,50), grey, rgb(50,50,50));
+  --gd-3-50: linear-gradient(rgba(50,50,50,.5), rgba(175,175,175,.5), rgba(50,50,50,.5));
 
   /*? d[-_-]b grey colors */
   
@@ -17,10 +19,10 @@
   --c-grey-4: rgb(100,100,100);
   --c-grey-5: rgb(125,125,125);
 
-  /*? d[-_-]b grey colors */
+  /*? d[-_-]b colors */
 
   --c-int-1: red;
-  --c-int-2: rgb(162,255,0);
+  --c-int-2: orange;
 }
 
 html {
@@ -49,6 +51,11 @@ img,
 video {
   max-width: 100%;
   height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: var(--c-grey-5);
 }
 
 /** (⌐■_■) Layout */
@@ -98,6 +105,57 @@ video {
   outline: 2px solid var(--c-grey-2);
 }
 
+/*? ➞➞➞➞➞ Menu1 ➞➞➞➞➞ */
+
+.menu1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+  background-color: var(--c-int-1);
+  border-radius: 1.5rem;
+}
+
+.menu1-cont {
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+  background-color: var(--c-int-2);
+  border-radius: 1.3rem;
+}
+
+.menu1-links {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu1__link {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 1px solid var(--c-int-2);
+  background-color: var(--c-grey-1);
+  color: var(--c-grey-5);
+  transition: background-color 500ms ease-in-out,
+  color 500ms ease-in-out;
+}
+
+.menu1__link:nth-child(1) {
+  border-radius: 1rem 1rem 0 0;
+}
+
+.menu1__link:nth-child(10) {
+  border-radius: 0 0 1rem 1rem;
+}
+
+.menu1__link:hover {
+  background-color: var(--c-int-2);
+  color: black;
+}
+
 /** (⌐■_■) ANI */
 
 @keyframes hue {
@@ -120,6 +178,15 @@ video {
 /* ?0__# int */
 
 .header .int:nth-child(1) {
+  width: 65%;
+  background-image: var(--gd-3-50);
+  height: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+}
+
+.header .int:nth-child(2) {
   left: 50%;
   height: 85%;
   width: 50%;
@@ -128,37 +195,37 @@ video {
   background-image: var(--gr-1);
 }
 
-.header .int:nth-child(2) {
+.header .int:nth-child(3) {
   background-color: var(--c-int-1);
   transform: skew(-45deg);
   left: -5%;
 }
 
-.header .int:nth-child(3) {
+.header .int:nth-child(4) {
   background-color: var(--c-int-1);
   transform: skew(45deg);
   right: -5%;
-}
-
-.header .int:nth-child(4) {
-  width: 20%;
-  height: 30%;
-  bottom: 0;
-  left: -5%;
-  background-image: repeating-linear-gradient(90deg, red 0 10%, rgb(50,50,50) 10% 20%);
-  transform: skew(45deg);
 }
 
 .header .int:nth-child(5) {
   width: 20%;
   height: 30%;
   bottom: 0;
-  right: -5%;
-  background-image: repeating-linear-gradient(90deg, red 0 10%, rgb(50,50,50) 10% 20%);
-  transform: skew(-45deg);
+  left: -5%;
+  background-image: repeating-linear-gradient(90deg, orange 0 10%, rgb(50,50,50) 10% 20%);
+  transform: skew(45deg);
 }
 
 .header .int:nth-child(6) {
+  width: 20%;
+  height: 30%;
+  bottom: 0;
+  right: -5%;
+  background-image: repeating-linear-gradient(90deg, orange 0 10%, rgb(50,50,50) 10% 20%);
+  transform: skew(-45deg);
+}
+
+.header .int:nth-child(7) {
   left: 50%;
   transform: translate(-50%, 0);
   bottom: 0;
@@ -168,7 +235,7 @@ video {
   clip-path: polygon(10% 0, 90% 0, 100% 100%, 0% 100%);
 }
 
-.header .int:nth-child(7) {
+.header .int:nth-child(8) {
   width: 25%;
   background-color: var(--c-grey-1);
   transform: skew(-45deg);
@@ -177,13 +244,30 @@ video {
   background-image: var(--gr-2);
 }
 
-.header .int:nth-child(8) {
+.header .int:nth-child(9) {
   width: 25%;
   background-color: var(--c-grey-1);
   transform: skew(45deg);
   top: -10%;
   right: -5%;
   background-image: var(--gr-2);
+}
+
+.header .int:nth-child(10) {
+  width: 15%;
+  height: 25%;
+  background-image: linear-gradient(90deg, rgb(50,50,50) 25%, rgb(150,150,150) 25% 26%, rgb(50,50,50) 26% 51%, rgb(150,150,150) 51%, 52%, rgb(50,50,50) 52% 77%, rgb(150,150,150) 77% 78%, rgb(50,50,50) 78%);
+  transform: skew(-45deg);
+  border: 1px solid var(--c-grey-5);
+}
+
+.header .int:nth-child(11) {
+  width: 15%;
+  height: 25%;
+  background-image: linear-gradient(90deg, rgb(50,50,50) 25%, rgb(150,150,150) 25% 26%, rgb(50,50,50) 26% 51%, rgb(150,150,150) 51%, 52%, rgb(50,50,50) 52% 77%, rgb(150,150,150) 77% 78%, rgb(50,50,50) 78%);
+  transform: skew(45deg);
+  border: 1px solid var(--c-grey-5);
+  right: 0;
 }
 
 /*! [ L ] */
@@ -193,6 +277,22 @@ video {
   border: 2px solid var(--c-grey-2);
   outline: 2px solid var(--c-grey-3);
 }
+
+/*? ➞➞➞➞➞ Menu1 ➞➞➞➞➞ */
+
+.left .menu1:nth-child(1) {
+  left: -95%;
+  transition: left 500ms ease-in-out;
+}
+
+.left .menu1:nth-child(1):hover {left: -3%;}
+
+.left .menu1:nth-child(2) {
+  right: -95%;
+  transition: right 500ms ease-in-out;
+}
+
+.left .menu1:nth-child(2):hover {right: -3%;}
 
 /*! [ C-1 ] */
 
@@ -230,6 +330,22 @@ video {
   border: 2px solid var(--c-grey-2);
   outline: 2px solid var(--c-grey-3);
 }
+
+/*? ➞➞➞➞➞ Menu1 ➞➞➞➞➞ */
+
+.right .menu1:nth-child(1) {
+  left: -95%;
+  transition: left 500ms ease-in-out;
+}
+
+.right .menu1:nth-child(1):hover {left: -3%;}
+
+.right .menu1:nth-child(2) {
+  right: -95%;
+  transition: right 500ms ease-in-out;
+}
+
+.right .menu1:nth-child(2):hover {right: -3%;}
 
 /*! [ Footer ] */
 
@@ -297,7 +413,7 @@ video {
   height: 30%;
   top: 0;
   left: -5%;
-  background-image: repeating-linear-gradient(90deg, red 0 10%, rgb(50,50,50) 10% 20%);
+  background-image: repeating-linear-gradient(90deg, orange 0 10%, rgb(50,50,50) 10% 20%);
   transform: skew(-45deg);
 }
 
@@ -306,6 +422,25 @@ video {
   height: 30%;
   top: 0;
   right: -5%;
-  background-image: repeating-linear-gradient(90deg, red 0 10%, rgb(50,50,50) 10% 20%);
+  background-image: repeating-linear-gradient(90deg, orange 0 10%, rgb(50,50,50) 10% 20%);
   transform: skew(45deg);
+}
+
+.footer .int:nth-child(9) {
+  width: 15%;
+  height: 25%;
+  background-image: linear-gradient(90deg, rgb(50,50,50) 25%, rgb(150,150,150) 25% 26%, rgb(50,50,50) 26% 51%, rgb(150,150,150) 51%, 52%, rgb(50,50,50) 52% 77%, rgb(150,150,150) 77% 78%, rgb(50,50,50) 78%);
+  transform: skew(45deg);
+  border: 1px solid var(--c-grey-5);
+  bottom: 0;
+}
+
+.footer .int:nth-child(10) {
+  width: 15%;
+  height: 25%;
+  background-image: linear-gradient(90deg, rgb(50,50,50) 25%, rgb(150,150,150) 25% 26%, rgb(50,50,50) 26% 51%, rgb(150,150,150) 51%, 52%, rgb(50,50,50) 52% 77%, rgb(150,150,150) 77% 78%, rgb(50,50,50) 78%);
+  transform: skew(-45deg);
+  border: 1px solid var(--c-grey-5);
+  right: 0;
+  bottom: 0;
 }
