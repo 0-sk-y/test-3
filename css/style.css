@@ -108,9 +108,11 @@ a {
 /*? ➞➞➞➞➞ Menu1 ➞➞➞➞➞ */
 
 .menu1 {
+  top: 50%;
+  transform: translate(0, -50%);
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 95%;
   padding: 0.5rem;
   background-color: var(--c-int-1);
   border-radius: 1.5rem;
@@ -152,6 +154,58 @@ a {
 }
 
 .menu1__link:hover {
+  background-color: var(--c-int-2);
+  color: black;
+}
+
+/*? ➞➞➞➞➞ Menu2 ➞➞➞➞➞ */
+
+.menu2 {
+  position: absolute;
+  width: 90%;
+  height: 50%;
+  background-color: var(--c-int-1);
+  padding: 0.5rem;
+  border-radius: 1.5rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.menu2-cont {
+  width: 100%;
+  height: 100%;
+  background-color: orange;
+  padding: 0.5rem;
+  border-radius: 1.3rem;
+}
+
+.menu2-links {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu2__link {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-grow: 1;
+  background-color: var(--c-grey-1);
+  border-bottom: 1px solid var(--c-int-2);
+  transition: background-color 500ms ease-in-out,
+  color 500ms ease-in-out;
+}
+
+.menu2__link:nth-child(1) {
+  border-radius: 1rem 1rem 0 0;
+}
+
+.menu2__link:nth-child(5) {
+  border-radius: 0 0 1rem 1rem;
+}
+
+.menu2__link:hover {
   background-color: var(--c-int-2);
   color: black;
 }
@@ -214,6 +268,7 @@ a {
   left: -5%;
   background-image: repeating-linear-gradient(90deg, orange 0 10%, rgb(50,50,50) 10% 20%);
   transform: skew(45deg);
+  animation: hue 10s linear infinite;
 }
 
 .header .int:nth-child(6) {
@@ -223,6 +278,7 @@ a {
   right: -5%;
   background-image: repeating-linear-gradient(90deg, orange 0 10%, rgb(50,50,50) 10% 20%);
   transform: skew(-45deg);
+  animation: hue 10s linear infinite;
 }
 
 .header .int:nth-child(7) {
@@ -294,6 +350,22 @@ a {
 
 .left .menu1:nth-child(2):hover {right: -3%;}
 
+/*? ➞➞➞➞➞ Menu2 ➞➞➞➞➞ */
+
+.left .menu2:nth-child(3) {
+  top: -47%;
+  transition: top 500ms ease-in-out;
+}
+
+.left .menu2:nth-child(3):hover {top: -2%;}
+
+.left .menu2:nth-child(4) {
+  bottom: -47%;
+  transition: bottom 500ms ease-in-out;
+}
+
+.left .menu2:nth-child(4):hover {bottom: -2%;}
+
 /*! [ C-1 ] */
 
 .c-1 {
@@ -346,6 +418,22 @@ a {
 }
 
 .right .menu1:nth-child(2):hover {right: -3%;}
+
+/*? ➞➞➞➞➞ Menu2 ➞➞➞➞➞ */
+
+.right .menu2:nth-child(3) {
+  top: -47%;
+  transition: top 500ms ease-in-out;
+}
+
+.right .menu2:nth-child(3):hover {top: -2%;}
+
+.right .menu2:nth-child(4) {
+  bottom: -47%;
+  transition: bottom 500ms ease-in-out;
+}
+
+.right .menu2:nth-child(4):hover {bottom: -2%;}
 
 /*! [ Footer ] */
 
@@ -415,6 +503,7 @@ a {
   left: -5%;
   background-image: repeating-linear-gradient(90deg, orange 0 10%, rgb(50,50,50) 10% 20%);
   transform: skew(-45deg);
+  animation: hue 10s linear infinite;
 }
 
 .footer .int:nth-child(8) {
@@ -424,6 +513,7 @@ a {
   right: -5%;
   background-image: repeating-linear-gradient(90deg, orange 0 10%, rgb(50,50,50) 10% 20%);
   transform: skew(45deg);
+  animation: hue 10s linear infinite;
 }
 
 .footer .int:nth-child(9) {
