@@ -21,7 +21,7 @@
 
   /*? d[-_-]b colors */
 
-  --c-int-1: red;
+  --c-int-1: black;
   --c-int-2: orange;
 }
 
@@ -210,6 +210,84 @@ a {
   color: black;
 }
 
+/*? ➞➞➞➞➞ Menu3 ➞➞➞➞➞ */
+
+.menu3 {
+  position: absolute;
+  width: 30%;
+  height: 10%;
+  background-color: rgba(0,0,0,.5);
+  padding: 0.5rem;
+  border: 1px solid var(--c-grey-4);
+  border-radius: 1.3rem;
+}
+
+.menu3-cont {
+  width: 100%;
+  height: 100%;
+  background-color: var(--c-int-2);
+  padding: 0.3rem;
+  border-radius: 1rem;
+}
+
+.menu3-links {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.menu3__link {
+  display: flex;
+  justify-content: space-evenly;
+  flex-grow: 1;
+  align-items: center;
+  background-color: var(--c-grey-1);
+  transition: hue 500ms ease-in-out,
+  color 500ms ease-in-out;
+}
+
+.menu3__link:nth-child(1) {border-radius: 1rem 0 0 1rem;}
+.menu3__link:nth-child(5) {border-radius: 0 1rem 1rem 0;}
+
+.menu3__link:hover {
+  animation: hue 2s linear normal;
+  color: aquamarine;
+}
+
+/** (⌐■_■) m31 m32 m33 m34 */
+
+.m31 {
+  top: -7%;
+  left: 3%;
+  transition: top 500ms ease-in-out;
+}
+
+.m31:hover {top: 0;}
+
+.m32 {
+  top: -7%;
+  right: 3%;
+  transition: top 500ms ease-in-out;
+}
+
+.m32:hover {top: 0;}
+
+.m33 {
+  bottom: -7%;
+  left: 3%;
+  transition: bottom 500ms ease-in-out;
+}
+
+.m33:hover {bottom: 0;}
+
+.m34 {
+  bottom: -7%;
+  right: 3%;
+  transition: bottom 500ms ease-in-out;
+}
+
+.m34:hover {bottom: 0;}
+
 /** (⌐■_■) ANI */
 
 @keyframes hue {
@@ -324,6 +402,16 @@ a {
   transform: skew(45deg);
   border: 1px solid var(--c-grey-5);
   right: 0;
+}
+
+.header .int:nth-child(12) {
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: -20%;
+  width: 20%;
+  height: 30%;
+  background-color: var(--c-int-2);
+  clip-path: polygon(10% 0, 90% 0, 100% 100%, 0% 100%);
 }
 
 /*! [ L ] */
@@ -533,4 +621,14 @@ a {
   border: 1px solid var(--c-grey-5);
   right: 0;
   bottom: 0;
+}
+
+.footer .int:nth-child(11) {
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: -20%;
+  width: 20%;
+  height: 30%;
+  background-color: var(--c-int-2);
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
 }
