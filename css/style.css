@@ -254,7 +254,6 @@ a {
   color: aquamarine;
 }
 
-/** (⌐■_■) m31 m32 m33 m34 */
 
 .m31 {
   top: -7%;
@@ -287,6 +286,54 @@ a {
 }
 
 .m34:hover {bottom: 0;}
+
+/*? ➞➞➞➞➞ Menu4 ➞➞➞➞➞ */
+
+.menu4 {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background-color: rgba(0,0,0,.5);
+  padding: 0.5rem;
+  border: 1px solid var(--c-grey-3);
+  border-radius: 1.7rem;
+}
+
+.menu4-cont {
+  width: 100%;
+  height: 100%;
+  background-color: var(--c-int-2);
+  padding: 0.3rem;
+  border-radius: 1.2rem;
+}
+
+.menu4-links {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu4__link {
+  background-color: black;
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 1px solid var(--c-grey-3);
+  transition: background-color 500ms ease-in-out,
+  color 500ms ease-in-out;
+}
+
+.menu4__link:nth-child(1) {border-radius: 1rem 1rem 0 0;}
+.menu4__link:nth-child(5) {border-radius: 0 0 1rem 1rem;}
+
+.menu4__link:hover {
+  animation: hue 2s linear normal;
+  background-color: var(--c-int-2);
+  color: black;
+}
+
 
 /** (⌐■_■) ANI */
 
@@ -461,11 +508,43 @@ a {
   border: 1px solid var(--c-grey-2);
 }
 
+/*? ➞➞➞➞➞ Menu4 ➞➞➞➞➞ */
+
+.c-1 .menu4:nth-child(1) {
+  left: -45%;
+  transition: left 500ms ease-in-out;
+}
+
+.c-1 .menu4:nth-child(1):hover {left: 0;}
+
+.c-1 .menu4:nth-child(2) {
+  right: -45%;
+  transition: right 500ms ease-in-out;
+}
+
+.c-1 .menu4:nth-child(2):hover {right: 0;}
+
 /*! [ C-2 ] */
 
 .c-2 {
   background-color: var(--c-grey-1);
 }
+
+/*? ➞➞➞➞➞ Menu4 ➞➞➞➞➞ */
+
+.c-2 .menu4:nth-child(1) {
+  left: -45%;
+  transition: left 500ms ease-in-out;
+}
+
+.c-2 .menu4:nth-child(1):hover {left: 0;}
+
+.c-2 .menu4:nth-child(2) {
+  right: -45%;
+  transition: right 500ms ease-in-out;
+}
+
+.c-2 .menu4:nth-child(2):hover {right: 0;}
 
 
 /*! [ C-3 ] */
@@ -474,6 +553,21 @@ a {
   background-color: var(--c-grey-1);
 }
 
+/*? ➞➞➞➞➞ Menu4 ➞➞➞➞➞ */
+
+.c-3 .menu4:nth-child(1) {
+  left: -45%;
+  transition: left 500ms ease-in-out;
+}
+
+.c-3 .menu4:nth-child(1):hover {left: 0;}
+
+.c-3 .menu4:nth-child(2) {
+  right: -45%;
+  transition: right 500ms ease-in-out;
+}
+
+.c-3 .menu4:nth-child(2):hover {right: 0;}
 
 /*! [ C-4 ] */
 
@@ -482,6 +576,21 @@ a {
   border: 1px solid var(--c-grey-2);
 }
 
+/*? ➞➞➞➞➞ Menu4 ➞➞➞➞➞ */
+
+.c-4 .menu4:nth-child(1) {
+  left: -45%;
+  transition: left 500ms ease-in-out;
+}
+
+.c-4 .menu4:nth-child(1):hover {left: 0;}
+
+.c-4 .menu4:nth-child(2) {
+  right: -45%;
+  transition: right 500ms ease-in-out;
+}
+
+.c-4 .menu4:nth-child(2):hover {right: 0;}
 
 /*! [ R ] */
 
