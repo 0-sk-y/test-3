@@ -397,7 +397,7 @@ a {
   transform: translate(-50%, 0);
   clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
   background-image: var(--gd-4);
-  mix-blend-mode: multiply;
+  mix-blend-mode: overlay;
 }
 
 .header .int:nth-child(4) {
@@ -677,6 +677,21 @@ a {
   outline: 2px solid var(--c-int-2);
 }
 
+.mrk2 {
+  top: 50%;
+  color: var(--c-int-2);
+  left: 50%;
+  transform: translate(-50%, -20%);
+  z-index: 3;
+  position: absolute;
+  border: 5px solid var(--c-int-2);
+  padding: 0.5rem;
+  border-radius: 3rem;
+  background-color: var(--c-int-1);
+  outline: 1px solid var(--c-int-2);
+  outline-offset: 0.5rem;
+}
+
 /* ?0__# int */
 
 .footer .int:nth-child(1) {
@@ -695,7 +710,6 @@ a {
   transform: translate(-50%, 0);
   clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
   background-image: var(--gd-4);
-  mix-blend-mode: multiply;
 }
 
 .footer .int:nth-child(3) {
