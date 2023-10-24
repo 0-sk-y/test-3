@@ -10,6 +10,7 @@
   --gr-2: linear-gradient(black, rgb(58,58,58), black);
   --gd-3: linear-gradient(rgb(50,50,50), grey, rgb(50,50,50));
   --gd-3-50: linear-gradient(rgba(50,50,50,.5), rgba(175,175,175,.5), rgba(50,50,50,.5));
+  --gd-4: linear-gradient(rgb(25,25,25), orange, rgb(25,25,25));
 
   /*? d[-_-]b grey colors */
   
@@ -23,6 +24,20 @@
 
   --c-int-1: black;
   --c-int-2: orange;
+
+  /*? d[-_-]b images */
+
+  --img-1: url("../img/orange1.jfif");
+  --img-2: url("../img/orange2.jfif");
+  --img-3: url("../img/orange3.jfif");
+  --img-4: url("../img/orange4.jfif");
+  --img-5: url("../img/orange5.jpg");
+  --img-6: url("../img/orange6.jpg");
+  --img-7: url("../img/orange7.jpg");
+  --img-8: url("../img/orange8.jpg");
+  --l-bg: url(../img/l-bg.jpg);
+  --r-bg: url(../img/r-bg.jpg);
+
 }
 
 html {
@@ -293,10 +308,11 @@ a {
   position: absolute;
   width: 50%;
   height: 100%;
-  background-color: rgba(0,0,0,.5);
+  background-image: var(--gd-3-50);
   padding: 0.5rem;
-  border: 1px solid var(--c-grey-3);
+  border: 5px solid var(--c-grey-5);
   border-radius: 1.7rem;
+  outline: 2px solid var(--c-int-2);
 }
 
 .menu4-cont {
@@ -330,8 +346,7 @@ a {
 
 .menu4__link:hover {
   animation: hue 2s linear normal;
-  background-color: var(--c-int-2);
-  color: black;
+  color: aquamarine;
 }
 
 
@@ -350,15 +365,15 @@ a {
 
 .header {
   background-image: var(--gr-2);
-  border: 2px solid var(--c-grey-2);
-  outline: 2px solid var(--c-grey-3);
+  border: 2px solid var(--c-int-2);
+  outline: 2px solid var(--c-int-2);
 }
 
 /* ?0__# int */
 
 .header .int:nth-child(1) {
   width: 65%;
-  background-image: var(--gd-3-50);
+  background-image: var(--gd-4);
   height: 100%;
   left: 50%;
   transform: translate(-50%, 0);
@@ -368,45 +383,58 @@ a {
 .header .int:nth-child(2) {
   left: 50%;
   height: 85%;
-  width: 50%;
+  width: 40%;
   transform: translate(-50%, 0);
   clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
-  background-image: var(--gr-1);
+  background-image: var(--gd-4);
+  mix-blend-mode: screen;
 }
 
 .header .int:nth-child(3) {
+  left: 50%;
+  height: 100%;
+  width: 50%;
+  transform: translate(-50%, 0);
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+  background-image: var(--gd-4);
+  mix-blend-mode: multiply;
+}
+
+.header .int:nth-child(4) {
   background-color: var(--c-int-1);
   transform: skew(-45deg);
   left: -5%;
 }
 
-.header .int:nth-child(4) {
+.header .int:nth-child(5) {
   background-color: var(--c-int-1);
   transform: skew(45deg);
   right: -5%;
-}
-
-.header .int:nth-child(5) {
-  width: 20%;
-  height: 30%;
-  bottom: 0;
-  left: -5%;
-  background-image: repeating-linear-gradient(90deg, orange 0 10%, rgb(50,50,50) 10% 20%);
-  transform: skew(45deg);
-  animation: hue 10s linear infinite;
 }
 
 .header .int:nth-child(6) {
   width: 20%;
   height: 30%;
   bottom: 0;
-  right: -5%;
+  left: -5%;
   background-image: repeating-linear-gradient(90deg, orange 0 10%, rgb(50,50,50) 10% 20%);
-  transform: skew(-45deg);
+  transform: skew(45deg);
   animation: hue 10s linear infinite;
+  border: 1px solid var(--c-int-2);
 }
 
 .header .int:nth-child(7) {
+  width: 20%;
+  height: 30%;
+  bottom: 0;
+  right: -5%;
+  background-image: repeating-linear-gradient(90deg, rgb(50,50,50) 0 10%, orange 10% 20%);
+  transform: skew(-45deg);
+  animation: hue 10s linear infinite;
+  border: 1px solid var(--c-int-2);
+}
+
+.header .int:nth-child(8) {
   left: 50%;
   transform: translate(-50%, 0);
   bottom: 0;
@@ -416,7 +444,7 @@ a {
   clip-path: polygon(10% 0, 90% 0, 100% 100%, 0% 100%);
 }
 
-.header .int:nth-child(8) {
+.header .int:nth-child(9) {
   width: 25%;
   background-color: var(--c-grey-1);
   transform: skew(-45deg);
@@ -425,7 +453,7 @@ a {
   background-image: var(--gr-2);
 }
 
-.header .int:nth-child(9) {
+.header .int:nth-child(10) {
   width: 25%;
   background-color: var(--c-grey-1);
   transform: skew(45deg);
@@ -434,7 +462,7 @@ a {
   background-image: var(--gr-2);
 }
 
-.header .int:nth-child(10) {
+.header .int:nth-child(11) {
   width: 15%;
   height: 25%;
   background-image: linear-gradient(90deg, rgb(50,50,50) 25%, rgb(150,150,150) 25% 26%, rgb(50,50,50) 26% 51%, rgb(150,150,150) 51%, 52%, rgb(50,50,50) 52% 77%, rgb(150,150,150) 77% 78%, rgb(50,50,50) 78%);
@@ -442,7 +470,7 @@ a {
   border: 1px solid var(--c-grey-5);
 }
 
-.header .int:nth-child(11) {
+.header .int:nth-child(12) {
   width: 15%;
   height: 25%;
   background-image: linear-gradient(90deg, rgb(50,50,50) 25%, rgb(150,150,150) 25% 26%, rgb(50,50,50) 26% 51%, rgb(150,150,150) 51%, 52%, rgb(50,50,50) 52% 77%, rgb(150,150,150) 77% 78%, rgb(50,50,50) 78%);
@@ -451,7 +479,7 @@ a {
   right: 0;
 }
 
-.header .int:nth-child(12) {
+.header .int:nth-child(13) {
   left: 50%;
   transform: translate(-50%, 0);
   bottom: -20%;
@@ -464,9 +492,10 @@ a {
 /*! [ L ] */
 
 .left {
-  background-image: var(--gr-2);
-  border: 2px solid var(--c-grey-2);
-  outline: 2px solid var(--c-grey-3);
+  background-image: var(--l-bg);
+  background-size: contain;
+  border: 2px solid var(--c-int-2);
+  outline: 2px solid var(--c-int-2);
 }
 
 /*? ➞➞➞➞➞ Menu1 ➞➞➞➞➞ */
@@ -501,11 +530,19 @@ a {
 
 .left .menu2:nth-child(4):hover {bottom: -2%;}
 
+.c-1,
+.c-2,
+.c-3,
+.c-4 {
+  background-position: center center;
+  background-size: cover;
+  border: 1px solid var(--c-int-2);
+}
+
 /*! [ C-1 ] */
 
 .c-1 {
-  background-color: var(--c-grey-1);
-  border: 1px solid var(--c-grey-2);
+  background-image: var(--img-5);
 }
 
 /*? ➞➞➞➞➞ Menu4 ➞➞➞➞➞ */
@@ -527,7 +564,7 @@ a {
 /*! [ C-2 ] */
 
 .c-2 {
-  background-color: var(--c-grey-1);
+  background-image: var(--img-6);
 }
 
 /*? ➞➞➞➞➞ Menu4 ➞➞➞➞➞ */
@@ -550,7 +587,7 @@ a {
 /*! [ C-3 ] */
 
 .c-3 {
-  background-color: var(--c-grey-1);
+  background-image: var(--img-7);
 }
 
 /*? ➞➞➞➞➞ Menu4 ➞➞➞➞➞ */
@@ -572,8 +609,7 @@ a {
 /*! [ C-4 ] */
 
 .c-4 {
-  background-color: var(--c-grey-1);
-  border: 1px solid var(--c-grey-2);
+  background-image: var(--img-8);
 }
 
 /*? ➞➞➞➞➞ Menu4 ➞➞➞➞➞ */
@@ -595,9 +631,10 @@ a {
 /*! [ R ] */
 
 .right {
-  background-image: var(--gr-2);
-  border: 2px solid var(--c-grey-2);
-  outline: 2px solid var(--c-grey-3);
+  background-image: var(--r-bg);
+  background-size: contain;
+  border: 2px solid var(--c-int-2);
+  outline: 2px solid var(--c-int-2);
 }
 
 /*? ➞➞➞➞➞ Menu1 ➞➞➞➞➞ */
@@ -636,8 +673,8 @@ a {
 
 .footer {
   background-image: var(--gr-2);
-  border: 2px solid var(--c-grey-2);
-  outline: 2px solid var(--c-grey-3);
+  border: 2px solid var(--c-int-2);
+  outline: 2px solid var(--c-int-2);
 }
 
 /* ?0__# int */
@@ -648,24 +685,34 @@ a {
   width: 60%;
   transform: translate(-50%, 0);
   clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
-  background-image: var(--gr-1);
+  background-image: var(--gd-4);
 }
 
 .footer .int:nth-child(2) {
+  left: 50%;
+  height: 85%;
+  width: 50%;
+  transform: translate(-50%, 0);
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+  background-image: var(--gd-4);
+  mix-blend-mode: multiply;
+}
+
+.footer .int:nth-child(3) {
   background-color: var(--c-int-1);
   transform: skew(45deg);
   left: -5%;
   bottom: 0;
 }
 
-.footer .int:nth-child(3) {
+.footer .int:nth-child(4) {
   background-color: var(--c-int-1);
   transform: skew(-45deg);
   right: -5%;
   bottom: 0;
 }
 
-.footer .int:nth-child(4) {
+.footer .int:nth-child(5) {
   left: 50%;
   transform: translate(-50%, 0);
   top: 0;
@@ -675,7 +722,7 @@ a {
   clip-path: polygon(0 0, 100% 1%, 90% 100%, 10% 100%);
 }
 
-.footer .int:nth-child(5) {
+.footer .int:nth-child(6) {
   width: 25%;
   background-color: var(--c-grey-1);
   transform: skew(45deg);
@@ -684,36 +731,38 @@ a {
   background-image: var(--gr-2);
 }
 
-.footer .int:nth-child(6) {
+.footer .int:nth-child(7) {
   width: 25%;
   background-color: var(--c-grey-1);
   transform: skew(-45deg);
   bottom: -10%;
   right: -5%;
   background-image: var(--gr-2);
-}
-
-.footer .int:nth-child(7) {
-  width: 20%;
-  height: 30%;
-  top: 0;
-  left: -5%;
-  background-image: repeating-linear-gradient(90deg, orange 0 10%, rgb(50,50,50) 10% 20%);
-  transform: skew(-45deg);
-  animation: hue 10s linear infinite;
 }
 
 .footer .int:nth-child(8) {
   width: 20%;
   height: 30%;
   top: 0;
-  right: -5%;
+  left: -5%;
   background-image: repeating-linear-gradient(90deg, orange 0 10%, rgb(50,50,50) 10% 20%);
-  transform: skew(45deg);
+  transform: skew(-45deg);
   animation: hue 10s linear infinite;
+  border: 1px solid var(--c-int-2);
 }
 
 .footer .int:nth-child(9) {
+  width: 20%;
+  height: 30%;
+  top: 0;
+  right: -5%;
+  background-image: repeating-linear-gradient(90deg, rgb(50,50,50) 0 10%, orange 10% 20%);
+  transform: skew(45deg);
+  animation: hue 10s linear infinite;
+  border: 1px solid var(--c-int-2);
+}
+
+.footer .int:nth-child(10) {
   width: 15%;
   height: 25%;
   background-image: linear-gradient(90deg, rgb(50,50,50) 25%, rgb(150,150,150) 25% 26%, rgb(50,50,50) 26% 51%, rgb(150,150,150) 51%, 52%, rgb(50,50,50) 52% 77%, rgb(150,150,150) 77% 78%, rgb(50,50,50) 78%);
@@ -722,7 +771,7 @@ a {
   bottom: 0;
 }
 
-.footer .int:nth-child(10) {
+.footer .int:nth-child(11) {
   width: 15%;
   height: 25%;
   background-image: linear-gradient(90deg, rgb(50,50,50) 25%, rgb(150,150,150) 25% 26%, rgb(50,50,50) 26% 51%, rgb(150,150,150) 51%, 52%, rgb(50,50,50) 52% 77%, rgb(150,150,150) 77% 78%, rgb(50,50,50) 78%);
@@ -732,7 +781,7 @@ a {
   bottom: 0;
 }
 
-.footer .int:nth-child(11) {
+.footer .int:nth-child(12) {
   left: 50%;
   transform: translate(-50%, 0);
   top: -20%;
